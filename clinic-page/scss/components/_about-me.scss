@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+.about-me {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    width: 40%;
+    padding: 0 2rem;
+    overflow: hidden;
+
+    img {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+
+      overflow: hidden;
+    }
+  }
+  &__content {
+    width: 50%;
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    h2,
+    h3,
+    h4 {
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1.1;
+      color: $green500;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    h4 {
+      color: $green400;
+      text-transform: uppercase;
+    }
+    p {
+      font-family: "Be Vietnam", sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $black100;
+      font-weight: 300;
+      padding: 1.5rem 0;
+    }
+  }
+}

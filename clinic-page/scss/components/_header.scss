@@ -1,0 +1,74 @@
+@import "variables.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+
+  background-color: $beige100;
+  position: relative;
+  &__content {
+    width: 95%;
+    z-index: 2;
+
+    @media (min-width: $layout-breakpoint-medium) {
+      width: 70%;
+    }
+    @media (min-width: $layout-breakpoint-screen) {
+      width: 50%;
+
+      padding: 7rem 3rem;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 600;
+      padding-bottom: 1.5rem;
+      color: $green500;
+      word-wrap: break-word;
+      @media (min-width: $layout-breakpoint-medium) {
+        font-size: 4rem;
+      }
+    }
+    p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: $black100;
+      line-height: 1.6;
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__image {
+    @media (max-width: $layout-breakpoint-xsmall) {
+      display: none;
+    }
+
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 80%;
+      transform: translateY(-50%);
+      @media (max-width: $layout-breakpoint-medium) {
+        height: 50%;
+      }
+    }
+  }
+  &::after {
+    @media (max-width: $layout-breakpoint-medium) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $beige100;
+      opacity: 0.4;
+    }
+  }
+}

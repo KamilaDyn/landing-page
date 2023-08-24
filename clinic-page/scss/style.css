@@ -1,0 +1,269 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #f5f4ef;
+  position: relative;
+}
+.header__content {
+  width: 95%;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  .header__content {
+    width: 70%;
+  }
+}
+@media (min-width: 1400px) {
+  .header__content {
+    width: 50%;
+    padding: 7rem 3rem;
+  }
+}
+.header__content h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  color: #295853;
+  word-wrap: break-word;
+}
+@media (min-width: 1200px) {
+  .header__content h1 {
+    font-size: 4rem;
+  }
+}
+.header__content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #999999;
+  line-height: 1.6;
+  padding-bottom: 1.5rem;
+}
+.header__image {
+  height: 100%;
+}
+@media (max-width: 540px) {
+  .header__image {
+    display: none;
+  }
+}
+.header__image img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 80%;
+  transform: translateY(-50%);
+}
+@media (max-width: 1200px) {
+  .header__image img {
+    height: 50%;
+  }
+}
+@media (max-width: 1200px) {
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f4ef;
+    opacity: 0.4;
+  }
+}
+
+.about-me {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me__image {
+  width: 40%;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.about-me__image img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about-me__content {
+  width: 50%;
+}
+.about-me__content h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.about-me__content h2,
+.about-me__content h3,
+.about-me__content h4 {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+  color: #295853;
+}
+.about-me__content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.about-me__content h4 {
+  color: #4b9b86;
+  text-transform: uppercase;
+}
+.about-me__content p {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #999999;
+  font-weight: 300;
+  padding: 1.5rem 0;
+}
+
+.offers {
+  padding: 7rem 2rem;
+}
+.offers header h2 {
+  text-align: center;
+  color: #295853;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  padding-bottom: 7rem;
+}
+.offers__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 5rem;
+  grid-template-areas: ". ." ". .";
+}
+.offers__wrapper__container {
+  place-self: center;
+  background-color: #4b9b86;
+  padding: 2rem;
+  border-radius: 15px;
+  color: #f5f4ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.offers__wrapper__container:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+.offers__wrapper__container:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+.offers__wrapper__container:nth-child(3) {
+  grid-area: 2/1/3/2;
+}
+.offers__wrapper__container:nth-child(4) {
+  grid-area: 2/2/3/3;
+}
+.offers__wrapper__container:nth-child(5) {
+  grid-area: 3/1/4/2;
+}
+.offers__wrapper__container i {
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+}
+.offers__wrapper__container h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.offers__wrapper__container p {
+  font-size: 1.1rem;
+  padding: 1.5rem 0.5rem;
+}
+.offers__wrapper__container button {
+  width: 200px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #f5f4ef;
+  padding-block: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #333333;
+}
+.offers__wrapper__container button:hover {
+  background-color: #abdbc0;
+}
+
+.contact {
+  display: flex;
+  background-color: #f5f4ef;
+  padding: 3rem 1.5rem;
+}
+.contact div {
+  width: 33%;
+  margin: 2rem 0;
+  border-right: 1px solid #4b9b86;
+  padding: 0 2rem;
+}
+.contact div h4 {
+  color: #295853;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+.contact div p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #333333;
+}
+.contact div:last-child {
+  border-right: none;
+}
+
+.footer {
+  background-color: #333333;
+  color: #fafafa;
+  display: flex;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+}
+.footer h2 {
+  line-height: 2.5rem;
+}
+.footer__logo {
+  width: 40%;
+}
+.footer__logo p {
+  padding-block: 1rem;
+}
+.footer__logo__social-media {
+  font-size: 2rem;
+}
+.footer__logo__social-media i {
+  margin-inline: 1rem;
+}
+.footer__hours {
+  line-height: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: "Poppins", Helvertica, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

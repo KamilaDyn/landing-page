@@ -1,0 +1,26 @@
+.footer {
+  background-color: $black300;
+  color: $white;
+  display: flex;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+
+  h2 {
+    line-height: 2.5rem;
+  }
+  &__logo {
+    p {
+      padding-block: 1rem;
+    }
+    width: 40%;
+    &__social-media {
+      font-size: 2rem;
+      i {
+        margin-inline: 1rem;
+      }
+    }
+  }
+  &__hours {
+    line-height: 1.5rem;
+  }
+}
